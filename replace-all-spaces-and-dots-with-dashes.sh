@@ -1,7 +1,13 @@
 #!/bin/bash
 
+# Check if a directory has been provided
+if [ -z "$1" ]; then
+  echo "Please provide a directory."
+  exit 1
+fi
+
 # Navigate to the target directory
-cd academy
+cd "$1"
 
 # Loop through each file in the directory
 for file in *; do
